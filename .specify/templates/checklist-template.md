@@ -32,9 +32,22 @@
 - [ ] CHK005 Item with specific criteria
 - [ ] CHK006 Final item in this category
 
+## Constitution Compliance (MANDATORY)
+
+本檢查清單必須遵守 `.specify/memory/constitution.md` 中定義的「核心原則」與治理條款。提交此檢查清單時，請檢查並註明：
+
+- ✅ 是否包含測試優先或驗收標準檢查項（支持「可測性與測試優先」原則）？
+- ✅ 檢查項是否保持簡潔且無冗餘（支持「簡潔與不過度設計」原則）？
+- ✅ 是否列出可觀察性相關檢查（日誌、監測、指標；支持「可觀察性」原則）？
+- ✅ 是否包含版本影響評估或破壞性變更檢查（支持「版本語義與破壞性變更」原則）？
+
+若本檢查清單存在與憲法衝突之處，必須在本節說明並提出替代方案或豁免申請。
+
 ## Notes
 
 - Check items off as completed: `[x]`
 - Add comments or findings inline
 - Link to relevant resources or documentation
 - Items are numbered sequentially for easy reference
+
+```

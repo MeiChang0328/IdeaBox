@@ -240,6 +240,18 @@ With multiple developers:
 
 ---
 
+## Constitution Compliance (MANDATORY)
+
+本任務文件必須遵守 `.specify/memory/constitution.md` 中定義的「核心原則」與治理條款。提交此任務時，請檢查並註明：
+
+- ✅ 任務是否分組支持 MVP 優先（每個用戶故事可獨立實作與測試）？
+- ✅ 是否為每個故事定義測試優先任務（單元測試、整合測試或 UI 測試在實作前列出）？
+- ✅ 實作任務是否保持簡潔（無不必要的抽象或提前最佳化）？
+- ✅ 關鍵流程中是否列出可觀察性相關任務（日誌、錯誤追蹤）？
+- ✅ 是否說明版本影響與破壞性變更處理？
+
+若本任務文件存在與憲法衝突之處，必須在本節說明並提出替代方案或豁免申請。
+
 ## Notes
 
 - [P] tasks = different files, no dependencies
@@ -249,3 +261,5 @@ With multiple developers:
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
 - Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence
+
+````
