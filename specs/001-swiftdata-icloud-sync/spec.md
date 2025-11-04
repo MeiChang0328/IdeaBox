@@ -76,7 +76,7 @@ Users should be protected from data loss in edge cases like network failures, si
 
 **Acceptance Scenarios**:
 
-1. **Given** two devices editing the same idea simultaneously, **When** sync completes, **Then** one version is retained without data loss (last-write-wins or user-visible merge indicator)
+1. **Given** two devices editing the same idea simultaneously, **When** sync completes, **Then** the most recent version (by timestamp) is retained across all devices
 2. **Given** Device A is offline, **When** user creates ideas on Device B and Device A reconnects, **Then** previously offline ideas sync without duplication
 3. **Given** user is signed out of iCloud, **When** they return to the app, **Then** local ideas remain accessible and app does not crash
 4. **Given** iCloud sync fails temporarily, **When** network recovers, **Then** sync retries automatically without user intervention
@@ -111,10 +111,10 @@ Users should be protected from data loss in edge cases like network failures, si
 - **FR-001**: System MUST migrate all existing CoreData ideas to SwiftData format without loss or corruption
 - **FR-002**: System MUST use SwiftData as the persistent storage layer for all idea data (replacing CoreData)
 - **FR-003**: System MUST synchronize ideas across multiple devices using iCloud CloudKit when user is signed in to same Apple ID
-- **FR-004**: System MUST propagate idea creation, updates, and deletions to other devices within [NEEDS CLARIFICATION: acceptable sync latency - suggest 10 seconds as typical for CloudKit, but confirm if different target]
+- **FR-004**: System MUST propagate idea creation, updates, and deletions to other devices within 10 seconds
 - **FR-005**: System MUST preserve local data when iCloud is unavailable and resume sync when connectivity returns
 - **FR-006**: System MUST display clear sync status to user (e.g., "syncing", "synced", "error") to indicate data state
-- **FR-007**: System MUST handle simultaneous edits on multiple devices by [NEEDS CLARIFICATION: conflict resolution strategy - suggest last-write-wins is simplest MVP, but could also be visible merge/conflict indicator]
+- **FR-007**: System MUST handle simultaneous edits on multiple devices using last-write-wins strategy (most recent timestamp determines final value)
 - **FR-008**: System MUST not crash, corrupt data, or delete ideas if iCloud operations fail
 - **FR-009**: System MUST support sign-out of iCloud account; local ideas remain accessible but won't sync to other devices
 - **FR-010**: System MUST work on iOS 15+ (standard for current SwiftData availability)

@@ -13,7 +13,7 @@
 
 ## Requirement Completeness
 
-- [ ] No [NEEDS CLARIFICATION] markers remain
+- [x] No [NEEDS CLARIFICATION] markers remain
 - [x] Requirements are testable and unambiguous (except where marked NEEDS CLARIFICATION)
 - [x] Success criteria are measurable
 - [x] Success criteria are technology-agnostic (no implementation details)
@@ -31,8 +31,7 @@
 
 ## Notes
 
-- **[NEEDS CLARIFICATION] Markers Found**: 2 markers require user clarification
-  1. FR-004: Acceptable sync latency (suggested 10 seconds for CloudKit)
-  2. FR-007: Conflict resolution strategy (suggested last-write-wins for MVP)
-- These markers address critical design decisions but have reasonable default suggestions
-- Awaiting user confirmation before marking spec as ready for planning phase
+- **[NEEDS CLARIFICATION] Markers Resolved**: All 2 markers have been clarified and spec updated
+  1. ✅ FR-004: Acceptable sync latency = **10 seconds** (near-real-time, balanced CloudKit approach)
+  2. ✅ FR-007: Conflict resolution strategy = **Last-write-wins** (most recent timestamp wins)
+- Spec is now ready for `/speckit.plan` phase
