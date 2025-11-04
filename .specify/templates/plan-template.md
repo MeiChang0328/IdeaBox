@@ -29,9 +29,16 @@
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*GATE: 必須在 Phase 0 研究前通過；Phase 1 設計後重新檢查。*
 
-[Gates determined based on constitution file]
+必須遵循存於 `.specify/memory/constitution.md` 的核心原則。具體檢查項包括（但不限於）：
+
+- 是否以最小可行產品（MVP）為導向並保持簡潔（不過度設計）？
+- 是否為每個可獨立交付的使用者故事定義可測試的驗收標準？
+- 是否已在計畫中指出必要的測試類型（單元、整合、介面測試）與責任？
+- 是否說明了版本政策與破壞性變更處理流程（參照憲法的版本政策）？
+
+如有任何未達成項目，請在本計畫中以明確理由列出例外（Complexity Tracking 節）。
 
 ## Project Structure
 

@@ -65,6 +65,16 @@
 
 [Add more user stories as needed, each with an assigned priority]
 
+## Constitution Compliance (MANDATORY)
+
+本規格文件必須遵守 `.specify/memory/constitution.md` 中定義的「核心原則」與治理條款。提交此規格時，請檢查並註明：
+
+- 是否滿足憲法中關於可測性、MVP 優先與簡潔設計的要求？
+- 是否列出與版本發布/破壞性變更相關的影響評估？
+- 是否在「User Scenarios & Testing」中提供獨立可測試的驗收案例？
+
+若本規格存在與憲法衝突之處，必須在本節說明並提出替代方案或豁免申請。
+
 ### Edge Cases
 
 <!--
